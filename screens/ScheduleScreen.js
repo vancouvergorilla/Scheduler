@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text } from 'react-native';
 import CourseList from '../components/CourseList';
 import UserContext from '../contexts/UserContext';
 import CourseEditScreen from './CourseEditScreen';
-import {firebase} from '../firebase'
+import {firebase} from '../utils/firebase'
 
 const Banner = ({ title }) => (
   <Text style={styles.banner}>{title || '[loading...]'}</Text>
