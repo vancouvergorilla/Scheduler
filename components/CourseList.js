@@ -2,9 +2,9 @@ import {ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import CourseSelector from './CourseSelector';
 import TermSelector from './TermSelector';
-import {getCourseTerm} from './utils/courses';
+import {getCourseTerm} from '../utils/courses';
 
-const CourseList = ({ courses }) => {
+const CourseList = ({ courses, view }) => {
   const [selectedTerm, setSelectedTerm] = useState('Fall');
   const termCourses = courses.filter(course => selectedTerm === getCourseTerm(course));
 
@@ -16,6 +16,7 @@ const CourseList = ({ courses }) => {
       />
       <CourseSelector
         courses={termCourses}
+        view={view}
       />
     </ScrollView>
   );
